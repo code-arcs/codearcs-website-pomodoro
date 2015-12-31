@@ -1,0 +1,47 @@
+body {
+    position: relative;
+    background-image: url(../img/Lowpoly_Landscape.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Ubuntu', sans-serif;
+}
+.pomodoro{
+    position: absolute;
+    background-color: #fff;
+    margin-top: 10%;
+    margin-left: 30%;
+    width: 40%;
+    padding: 10px;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pomodoro .timer{
+    font-size: 6em;
+    padding: 35px;
+    text-align: center;
+}
+
+.pomodoro .timer .work{
+    color: #211281;
+}
+
+.pomodoro .timer .break{
+    color: #0b8125;
+}
+
+.pomodoro .settings{
+    padding: 35px 10px;
+}
+
+.pomodoro .settings input{
+    border: none;
+    text-align: center;
+}
+
+.notSelectable{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}

@@ -1,0 +1,87 @@
+<div class="pomodoro">
+    <md-tabs md-selected="selected" md-stretch-tabs="ever" md-dynamic-height="true">
+        <md-tab label="Settings">
+            <div class="settings">
+                <div layout>
+                    <div flex="10" layout layout-align="center center">
+                        <span class="md-body-1">Time per iteration</span>
+                    </div>
+
+                    <md-slider aria-label="Time per iteration" value="25" flex md-discrete
+                               ng-model="params.timePerIteration"
+                               id="time-slider" step="1" min="1" max="45">
+                    </md-slider>
+
+                    <div flex="10" layout layout-align="center center">
+                        <input flex type="number" ng-model="params.timePerIteration" aria-label="red"
+                               aria-controls="time-slider">
+                    </div>
+                </div>
+                <div layout>
+                    <div flex="10" layout layout-align="center center">
+                        <span class="md-body-1">Iterations</span>
+                    </div>
+
+                    <md-slider aria-label="Iterations" flex md-discrete ng-model="params.iterations"
+                               id="iteration-slider"
+                               step="1" min="1" max="6">
+                    </md-slider>
+
+                    <div flex="10" layout layout-align="center center">
+                        <input flex type="number" ng-model="params.iterations" aria-label="red"
+                               aria-controls="iteration-slider">
+                    </div>
+                </div>
+                <div layout>
+                    <div flex="10" layout layout-align="center center">
+                        <span class="md-body-1">Short break</span>
+                    </div>
+
+                    <md-slider aria-label="Short break" flex md-discrete ng-model="params.shortBreak"
+                               id="short-break-slider"
+                               step="1" min="1" max="10">
+                    </md-slider>
+
+                    <div flex="10" layout layout-align="center center">
+                        <input flex type="number" ng-model="params.shortBreak" aria-label="red"
+                               aria-controls="short-break-slider">
+                    </div>
+                </div>
+                <div layout>
+                    <div flex="10" layout layout-align="center center">
+                        <span class="md-body-1">Long break</span>
+                    </div>
+
+                    <md-slider aria-label="Long break" flex md-discrete ng-model="params.longBreak"
+                               id="long-break-slider"
+                               step="1" min="15" max="35">
+                    </md-slider>
+
+                    <div flex="10" layout layout-align="center center">
+                        <input flex type="number" ng-model="params.longBreak" aria-label="red"
+                               aria-controls="long-break-slider">
+                    </div>
+                </div>
+
+            </div>
+        </md-tab>
+        <md-tab label="Timer">
+
+            <div class="timer notSelectable">
+                <span ng-class="(statusKey === 'work') ? 'work' : 'break'">{{timerValue | date:'mm:ss'}}</span>
+            </div>
+
+        </md-tab>
+
+    </md-tabs>
+
+    <section layout="row" layout-sm="column" layout-align="left center" layout-wrap>
+        <md-button class="md-raised" ng-click="start()">Start</md-button>
+        <md-button class="md-raised" ng-click="stop()">Stop</md-button>
+        <div layout="row" layout-sm="column" layout-align="end center" flex>
+            <md-button class="md-raised" target="_blank" ng-href="https://en.wikipedia.org/wiki/Pomodoro_Technique">
+                Pomodoro?
+            </md-button>
+        </div>
+    </section>
+</div>

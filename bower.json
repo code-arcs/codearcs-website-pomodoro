@@ -1,0 +1,21 @@
+{
+  "name": "pomadoro",
+  "authors": [
+    "Lukas Gräßle <Lukas.Graessle@web.de>"
+  ],
+  "description": "A page to do pomadoro",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~1.0.1"
+  }
+}
