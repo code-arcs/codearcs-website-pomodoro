@@ -95,7 +95,7 @@ angular.module('PomodoroApp')
                         // If it's okay let's create a notification
                        new Notification(status[scope.statusKey].title, {
                             body: status[scope.statusKey].body,
-                            icon: "/src/img/Tomate.jpg"
+                            icon: "src/img/Tomate.jpg"
                         });
                     }
 
@@ -106,7 +106,7 @@ angular.module('PomodoroApp')
                             if (permission === "granted") {
                                new Notification(status[scope.statusKey].title, {
                                     body: status[scope.statusKey].body,
-                                    icon: "/src/img/Tomate.jpg"
+                                    icon: "src/img/Tomate.jpg"
                                 });
                             }
                         });
