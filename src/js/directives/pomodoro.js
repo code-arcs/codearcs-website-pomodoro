@@ -93,7 +93,7 @@ angular.module('PomodoroApp')
                     // Let's check whether notification permissions have alredy been granted
                     else if (Notification.permission === "granted") {
                         // If it's okay let's create a notification
-                        var notification = new Notification(status[scope.statusKey].title, {
+                        new Notification(status[scope.statusKey].title, {
                             body: status[scope.statusKey].body,
                             icon: "/src/img/Tomate.jpg"
                         });
@@ -104,8 +104,8 @@ angular.module('PomodoroApp')
                         Notification.requestPermission(function (permission) {
                             // If the user accepts, let's create a notification
                             if (permission === "granted") {
-                                var notification = new Notification("Hi there!", {
-                                    body: "Works for now",
+                                 new Notification(status[scope.statusKey].title, {
+                                    body: status[scope.statusKey].body,
                                     icon: "/src/img/Tomate.jpg"
                                 });
                             }
