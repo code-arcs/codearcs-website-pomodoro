@@ -76,8 +76,9 @@
     </md-tabs>
 
     <section layout="row" layout-sm="column" layout-align="left center" layout-wrap>
-        <md-button class="md-raised" ng-click="start()">Start</md-button>
+        <md-button class="md-raised" ng-click="start()">{{startReset}}</md-button>
         <md-button class="md-raised" ng-click="stop()">Stop</md-button>
+        <md-button class="md-raised" ng-click="pause()">{{pauseContinue}}</md-button>
         <div layout="row" layout-sm="column" layout-align="end center" flex>
             <md-button class="md-raised" target="_blank" ng-href="https://en.wikipedia.org/wiki/Pomodoro_Technique">
                 Pomodoro?
